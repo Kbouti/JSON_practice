@@ -56,3 +56,17 @@ function populateHeroes(obj) {
 }
 
 populate();
+
+
+// Below example to demonstrate JSON's ability to parse and stringify data:
+
+let myObj = {
+    name: "chris",
+    age: 38
+};
+console.log(myObj);
+let myString = JSON.stringify(myObj);
+console.log(myString);
+
+let backToObject = JSON.parse(myString);
+console.log(backToObject)
