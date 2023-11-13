@@ -70,3 +70,7 @@ console.log(myString);
 
 let backToObject = JSON.parse(myString);
 console.log(backToObject)
+
+
+// JSON validator: 
+// https://jsonformatter.curiousconcept.com/
