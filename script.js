@@ -1,3 +1,6 @@
+// Link to this MDN tutorial:
+// https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
+
 async function populate() {
   const requestURL =
     "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
@@ -5,6 +8,8 @@ async function populate() {
 
   const response = await fetch(request);
   const superHeroes = await response.json();
+
+  // This whole request, await, fetch thing confuses me a little bit. But ultimately at this point superHeroes is a JSON object.
 
   populateHeader(superHeroes);
   populateHeroes(superHeroes);
@@ -57,20 +62,18 @@ function populateHeroes(obj) {
 
 populate();
 
-
 // Below example to demonstrate JSON's ability to parse and stringify data:
 
 let myObj = {
-    name: "chris",
-    age: 38
+  name: "chris",
+  age: 38,
 };
 console.log(myObj);
 let myString = JSON.stringify(myObj);
 console.log(myString);
 
 let backToObject = JSON.parse(myString);
-console.log(backToObject)
+console.log(backToObject);
 
-
-// JSON validator: 
+// JSON validator:
 // https://jsonformatter.curiousconcept.com/
